@@ -6,7 +6,6 @@
   "description": "A lightweight Model wrapper for Kysely that provides convenient CRUD operations with full type safety.",
   "author": "hairyf <wwu710632@gmail.com>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/hairyf",
   "homepage": "https://github.com/hairyf/kysely-model#readme",
   "repository": {
     "type": "git",
@@ -14,6 +13,7 @@
   },
   "bugs": "https://github.com/hairyf/kysely-model/issues",
   "keywords": [
+    "react-native",
     "kysely",
     "model",
     "crud",
