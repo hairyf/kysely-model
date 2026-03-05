@@ -1,0 +1,71 @@
+{
+  "name": "kysely-model",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.25.0",
+  "description": "A lightweight Model wrapper for Kysely that provides convenient CRUD operations with full type safety.",
+  "author": "hairyf <wwu710632@gmail.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/hairyf",
+  "homepage": "https://github.com/hairyf/kysely-model#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hairyf/kysely-model.git"
+  },
+  "bugs": "https://github.com/hairyf/kysely-model/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint",
+    "prepublishOnly": "nr build",
+    "release": "bumpp",
+    "start": "tsx src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc",
+    "prepare": "simple-git-hooks"
+  },
+  "peerDependencies": {
+    "kysely": ">=0.28"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:cli",
+    "@antfu/ni": "catalog:cli",
+    "@antfu/utils": "catalog:inlined",
+    "@types/node": "catalog:types",
+    "bumpp": "catalog:cli",
+    "eslint": "catalog:cli",
+    "kysely": "catalog:kysely",
+    "lint-staged": "catalog:cli",
+    "publint": "catalog:cli",
+    "simple-git-hooks": "catalog:cli",
+    "tinyexec": "catalog:testing",
+    "tsdown": "catalog:cli",
+    "tsx": "catalog:cli",
+    "typescript": "catalog:cli",
+    "vite": "catalog:cli",
+    "vitest": "catalog:testing",
+    "vitest-package-exports": "catalog:testing",
+    "yaml": "catalog:testing"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
