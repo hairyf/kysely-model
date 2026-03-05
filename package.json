@@ -13,7 +13,13 @@
     "url": "git+https://github.com/hairyf/kysely-model.git"
   },
   "bugs": "https://github.com/hairyf/kysely-model/issues",
-  "keywords": [],
+  "keywords": [
+    "kysely",
+    "model",
+    "crud",
+    "typescript",
+    "javascript"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {

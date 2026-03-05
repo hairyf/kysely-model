@@ -39,14 +39,14 @@ catalogs:
     vite:
       specifier: ^7.2.7
       version: 7.2.7
-  default:
-    kysely:
-      specifier: ^0.28.11
-      version: 0.28.11
   inlined:
     '@antfu/utils':
       specifier: ^9.3.0
       version: 9.3.0
+  kysely:
+    kysely:
+      specifier: ^0.28.11
+      version: 0.28.11
   testing:
     tinyexec:
       specifier: ^1.0.2
@@ -88,7 +88,7 @@ importers:
         specifier: catalog:cli
         version: 9.39.2(jiti@2.6.1)
       kysely:
-        specifier: 'catalog:'
+        specifier: catalog:kysely
         version: 0.28.11
       lint-staged:
         specifier: catalog:cli
